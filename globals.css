@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.page,
+.success-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  overflow: hidden;
+
+  background-image: url("/firstbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal {
+  width: min(90%, 420px);
+  margin: 0 auto;
+  padding: 45px 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.modal h1 {
+  margin: 0 0 12px;
+  font-size: 30px;
+}
+
+.modal p {
+  margin: 0 0 30px;
+  color: #f5f1f1e0;
+  font-weight : 900;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  transform: translateX(5px);
+}
+
+.yes-button,
+.no-button {
+  width: 90px;
+  height: 45px;
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.yes-button {
+  color: white;
+  background: #ff4f87;
+}
+
+.yes-button:hover {
+  transform: scale(1.08);
+}
+
+.no-button {
+  color: #333;
+  background: #e8e8e8;
+}
+
+.initial-no-button {
+  position: static;
+}
+
+.runaway-no-button {
+  position: fixed;
+  transition:
+    left 0.18s ease,
+    top 0.18s ease;
+  z-index: 10;
+}
+
+.success-page {
+  flex-direction: column;
+  text-align: center;
+}
+
+.success-page h1 {
+  margin-bottom: 10px;
+  font-size: 42px;
+}
+
+.success-page p {
+  color: #555;
+  font-size: 20px;
+}
+
+.video-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  overflow: hidden;
+  background: #000;
+}
+
+.result-video {
+  width: 100%;
+  max-width: 900px;
+  max-height: calc(100dvh - 48px);
+
+  border-radius: 20px;
+  object-fit: contain;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+}
+
+.video-text {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+
+  width: 90%;
+  text-align: center;
+
+  color: white;
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 800;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.5);
+
+  pointer-events: none;
+}
